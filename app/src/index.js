@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+// import drizzle functions and contract artifact
+import { Drizzle } from "@drizzle/store";
+import GameCreator from "./contracts/GameCreator.json";
+import ChessGame from "./contracts/ChessGame.json";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+const options = {
+  contracts: [GameCreator],
+  web3: {
+    fallback: {
+      type: "ws",
+      url: "ws://127.0.0.1:9545",
+    },
+  },
+};
+
+const drizzle = new Drizzle(options);
+
+ReactDOM.render(<App drizzle={drizzle} />,
   document.getElementById('root')
 );
 

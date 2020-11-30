@@ -18,7 +18,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -55,7 +56,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"games\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getGamesSize\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"size\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_players\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_blockFactor\",\"type\":\"uint256\"}],\"name\":\"newGame\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"newContract\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/E/dev/Consensys Course/EtherChess/contracts/GameCreator.sol\":\"GameCreator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/dev/Consensys Course/EtherChess/contracts/BoardState.sol\":{\"keccak256\":\"0x5ed5103093f3cd8f768f34811b355a9a228ea60c98bf833c1210b16c0ce4722e\",\"urls\":[\"bzz-raw://2bacd38b1a1df0b4602982075493fcff6c7319b0ae23c113ef6e8741f06f5ce8\",\"dweb:/ipfs/QmZV2RTz3aW1skbeR7VXGWgW2nWM16kk7qLnEXvZksvAbz\"]},\"/E/dev/Consensys Course/EtherChess/contracts/ChessGame.sol\":{\"keccak256\":\"0x9f71fc8583699dd23a1f44d95dad833f44f908c9f393981972b8bc7606c36e3c\",\"urls\":[\"bzz-raw://9cc47789fd665af7884ef6e3ccb154a06b44f2f57a63292c495bcbb401bee485\",\"dweb:/ipfs/QmSUquxUvSU77ywkGtA2wKzpXVF6kXQzyhHqadZKA3d24a\"]},\"/E/dev/Consensys Course/EtherChess/contracts/GameCreator.sol\":{\"keccak256\":\"0xb72afbf60fa02f34a1e76d8e6026afc8d6682807133df86984d34000a70a236d\",\"urls\":[\"bzz-raw://9b6aa54eb57304e1892a15cc8fe19e15208e0932b50b99e00d765d7c9f55ad9c\",\"dweb:/ipfs/QmSJkLaXCuw6tzRWnhugwQXPivmxvXtTLbC8KEs5GkFNyG\"]},\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":{\"keccak256\":\"0xcbd711b08908f655cd7debdcc6838e8659698c50b79e25355a4498caa0daf273\",\"urls\":[\"bzz-raw://4e1388684831274723fcf052cae5877a06f1bbb856b29cec265d6da8dc185f75\",\"dweb:/ipfs/QmSNJwEzrvCxRYXaNZ9SExBe3RWwd7qZHXECm1ynWqQW32\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xf7c39c7e6d06ed3bda90cfefbcbf2ddc32c599c3d6721746546ad64946efccaa\",\"urls\":[\"bzz-raw://cb57a28e189cd8b05748db44bdd51d608e6f1364dd1b35ad921e1bc82c10631e\",\"dweb:/ipfs/QmaWWTBbVu2pRR9XUbE4iC159NoP59cRF9ZJwhf4ghFN9i\"]}},\"version\":1}",
@@ -1333,12 +1335,13 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0x025E1a345719545FB31728Fd9a20602c1D88115D",
-      "transactionHash": "0xfb8f3477d358623dc9f1d205f410f8c687264ca306b603c75a0448cf34ce1341"
+      "address": "0xA877f8C258654C83035EdbD88f1Ee154A6F30830",
+      "transactionHash": "0x66102515f116e3ddc26e450767cc7648a5e1f81ccd6c04634e418234190e291c"
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-11-30T18:38:24.519Z",
+  "updatedAt": "2020-11-30T19:31:12.556Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
