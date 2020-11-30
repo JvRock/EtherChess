@@ -1,0 +1,364 @@
+{
+  "contractName": "GameEngine",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_FEN",
+          "type": "string"
+        }
+      ],
+      "name": "evaluateMove",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_FEN\",\"type\":\"string\"}],\"name\":\"evaluateMove\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":\"GameEngine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":{\"keccak256\":\"0xcbd711b08908f655cd7debdcc6838e8659698c50b79e25355a4498caa0daf273\",\"urls\":[\"bzz-raw://4e1388684831274723fcf052cae5877a06f1bbb856b29cec265d6da8dc185f75\",\"dweb:/ipfs/QmSNJwEzrvCxRYXaNZ9SExBe3RWwd7qZHXECm1ynWqQW32\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061012f806100206000396000f3fe608060405260043610601c5760003560e01c806316e23104146021575b600080fd5b60d460048036036020811015603557600080fd5b8101908080359060200190640100000000811115605157600080fd5b820183602082011115606257600080fd5b80359060200191846001830284011164010000000083111715608357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505060ee565b604051808215151515815260200191505060405180910390f35b60006001905091905056fea2646970667358221220461f76442ae2792610521125885cfec9f105a8be20c628a6008217b36d0b187c64736f6c63430006010033",
+  "deployedBytecode": "0x608060405260043610601c5760003560e01c806316e23104146021575b600080fd5b60d460048036036020811015603557600080fd5b8101908080359060200190640100000000811115605157600080fd5b820183602082011115606257600080fd5b80359060200191846001830284011164010000000083111715608357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505060ee565b604051808215151515815260200191505060405180910390f35b60006001905091905056fea2646970667358221220461f76442ae2792610521125885cfec9f105a8be20c628a6008217b36d0b187c64736f6c63430006010033",
+  "sourceMap": "299:132:2:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;299:132:2;;;;;;;",
+  "deployedSourceMap": "299:132:2:-:0;;;;;;;;;;;;;;;;;;;;;326:102;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;326:102:2;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;326:102:2;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;326:102:2;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;326:102:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;326:102:2;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;392:4;416;409:11;;326:102;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.8.0;\r\n/*A stub contract that would usually evaluate proposed moves and allow/disallow them\r\n    At this point, due to time constraints, this simply evaluates to true allowing illegal moves\r\n    the front-end disallows incorrect moves, but this can easily be bypassed */\r\ncontract GameEngine {\r\n    function evaluateMove(string memory _FEN) public payable returns (bool) {\r\n        return true;\r\n    }\r\n}\r\n",
+  "sourcePath": "E:\\dev\\Consensys Course\\EtherChess\\contracts\\GameEngine.sol",
+  "ast": {
+    "absolutePath": "/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol",
+    "exportedSymbols": {
+      "GameEngine": [
+        186
+      ]
+    },
+    "id": 187,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 175,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 186,
+        "linearizedBaseContracts": [
+          186
+        ],
+        "name": "GameEngine",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 184,
+              "nodeType": "Block",
+              "src": "398:30:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 182,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "416:4:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 181,
+                  "id": 183,
+                  "nodeType": "Return",
+                  "src": "409:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "16e23104",
+            "id": 185,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "evaluateMove",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 177,
+                  "name": "_FEN",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 185,
+                  "src": "348:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 176,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "348:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "347:20:2"
+            },
+            "returnParameters": {
+              "id": 181,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 180,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 185,
+                  "src": "392:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 179,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "392:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "391:6:2"
+            },
+            "scope": 186,
+            "src": "326:102:2",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 187,
+        "src": "299:132:2"
+      }
+    ],
+    "src": "0:433:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol",
+    "exportedSymbols": {
+      "GameEngine": [
+        186
+      ]
+    },
+    "id": 187,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 175,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 186,
+        "linearizedBaseContracts": [
+          186
+        ],
+        "name": "GameEngine",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 184,
+              "nodeType": "Block",
+              "src": "398:30:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 182,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "416:4:2",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 181,
+                  "id": 183,
+                  "nodeType": "Return",
+                  "src": "409:11:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "16e23104",
+            "id": 185,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "evaluateMove",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 178,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 177,
+                  "name": "_FEN",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 185,
+                  "src": "348:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 176,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "348:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "347:20:2"
+            },
+            "returnParameters": {
+              "id": 181,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 180,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 185,
+                  "src": "392:4:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 179,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "392:4:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "391:6:2"
+            },
+            "scope": 186,
+            "src": "326:102:2",
+            "stateMutability": "payable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 187,
+        "src": "299:132:2"
+      }
+    ],
+    "src": "0:433:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.1+commit.e6f7d5a4.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.5",
+  "updatedAt": "2020-11-30T15:53:04.339Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
