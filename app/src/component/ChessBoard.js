@@ -4,34 +4,30 @@ import 'react-chessground/dist/styles/chessground.css'
 
 class ChessBoard extends Component {
 
-    state = { loading: true, drizzleState: null };
-    componentDidMount() {
-        const { drizzle } = this.props;
+  state = { dataKey: null };
+  componentDidMount() {
+      const { drizzle } = this.props;
+      const contract = drizzle.contracts.ChessGame;
+      console.log(contract);
+      // let drizzle know we want to watch the `myString` method
+      const dataKey = contract.methods["isGameOver"].cacheCall();
+      console.log("hi", dataKey);
+      // save the `dataKey` to local component state for later reference
+      this.setState({ dataKey });
+    }
     
-        // subscribe to changes in the store
-        this.unsubscribe = drizzle.store.subscribe(() => {
-    
-          // every time the store updates, grab the state from drizzle
-          const drizzleState = drizzle.store.getState();
-    
-          // check to see if it's ready, if so, update local component state
-          if (drizzleState.drizzleStatus.initialized) {
-            this.setState({ loading: false, drizzleState });
-          }
-        });
-      }
-    
-      componentWillUnmount() {
-        this.unsubscribe();
-      }
-
     render() {
+      console.log(this.props);
+      const { ChessGame } = this.props.drizzleState.contracts;
+      //console.log(ChessGame.getBoardState)
+      const FEN = ChessGame.isGameOver[this.state.dataKey];
+      console.log(FEN);
         if (this.state.loading) return "Loading Drizzle...";
-        return 
-            <div className="App">
+        return <div>hi</div>
+            /*<div className="App">
                 Drizzle is ready  
                 <Chessground />
-            </div>;
+            </div>;*/
     }
 
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-class ReadString extends React.Component {
+class NewGame extends React.Component {
   state = { dataKey: null };
 
   componentDidMount() {
@@ -27,4 +27,4 @@ class ReadString extends React.Component {
   }
 }
 
-export default ReadString;
+export default NewGame;

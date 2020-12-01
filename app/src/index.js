@@ -9,7 +9,7 @@ import GameCreator from "./contracts/GameCreator.json";
 import ChessGame from "./contracts/ChessGame.json";
 
 const options = {
-  contracts: [GameCreator],
+  contracts: [ChessGame, GameCreator],
   web3: {
     fallback: {
       type: "ws",

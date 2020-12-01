@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import ReadString from "./component/ReadString";
+import NewGame from "./component/NewGame";
+import ChessBoard from "./component/ChessBoard";
 
 class App extends Component {
   state = { loading: true, drizzleState: null };
 
   componentDidMount() {
+    console.log(this.props);
+
     const { drizzle } = this.props;
 
     // subscribe to changes in the store
@@ -28,10 +31,11 @@ class App extends Component {
     if (this.state.loading) return "Loading Drizzle...";
     return (
       <div className="App">
-        <ReadString
+        <ChessBoard
           drizzle={this.props.drizzle}
           drizzleState={this.state.drizzleState}
         />
+
       </div>
     );
   }

@@ -56,4 +56,8 @@ contract ChessGame {
         proposedMoves[msg.sender] = _proposedMove;
     }
 
+    function getBoardState() public view returns (string memory FEN) {
+        return boardState.FEN();
+    }
+
 }
