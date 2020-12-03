@@ -27,8 +27,11 @@ contract ChessGame {
 
     //Proposed Moves
     mapping(address => string) proposedMoves;
+    //Count of votes
+    uint voteCount;
 
     constructor (address[] memory _players, uint _blockFactor) public {
+        require(players.length < 8, "Maximum 8 players total");
         players = _players;
         blockFactor = _blockFactor;
         turn = false;
@@ -37,6 +40,7 @@ contract ChessGame {
         lastMove = block.number;
         gameEngine = new GameEngine();
         boardState = new BoardState();
+        voteCount = 0;
     }
     
     function gameOver() internal {
@@ -54,6 +58,39 @@ contract ChessGame {
         }
         require(gameEngine.evaluateMove(_proposedMove) == true);
         proposedMoves[msg.sender] = _proposedMove;
+        voteCount++;
+        isTurnOver();
+    }
+
+    function isTurnOver() internal {
+        if(voteCount >= (players.length+1)/2) {
+            makeTurn();
+        }
+    }
+
+    //Chooses a random person's move, sets board state.
+    function makeTurn() internal {
+        uint start;
+        if(turn == false) {
+            start = 0;
+        } else {
+            start = 1;
+        }
+        string[] memory vote = new string[]((voteCount+1)/2);
+        uint counter = 0;
+       for(uint i = start; i < (voteCount+start)*2; i=i+2) {
+            vote[counter] = proposedMoves[players[i]];
+            proposedMoves[players[i]] = "";
+            counter++;
+        }
+         uint randomNumber;
+        if(voteCount == 1) {
+            randomNumber = 0;
+        } else {
+            randomNumber = uint(keccak256(abi.encodePacked(blockhash(block.number-1)))) % voteCount;
+        }
+        boardState.newBoardState(vote[randomNumber]);
+        voteCount = 0;
     }
 
     function getBoardState() public view returns (string memory FEN) {

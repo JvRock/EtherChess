@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // import drizzle functions and contract artifact
 import { Drizzle } from "@drizzle/store";
-import GameCreator from "./contracts/GameCreator.json";
 import ChessGame from "./contracts/ChessGame.json";
+import GameCreator from "./contracts/GameCreator.json";
+import BoardState from "./contracts/BoardState.json";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const options = {
-  contracts: [ChessGame, GameCreator],
+  contracts: [ChessGame],
   web3: {
     fallback: {
       type: "ws",
