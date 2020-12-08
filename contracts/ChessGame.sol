@@ -10,7 +10,8 @@ contract ChessGame {
     GameEngine gameEngine;
 
     //A list of players. Odd numbers are black, even numbers are white.
-    address[] public players;
+    address[] public whitePlayers;
+    address[] public blackPlayers;
 
     //Mapping of which team an address is on
     //False = White, True = Black
@@ -30,9 +31,11 @@ contract ChessGame {
     //Count of votes
     uint voteCount;
 
-    constructor (address[] memory _players, uint _blockFactor) public {
-        require(players.length < 8, "Maximum 8 players total");
-        players = _players;
+    constructor (address[] memory _whitePlayers, address[] memory _blackPlayers, uint _blockFactor) public {
+        require(_whitePlayers.length < 4, "Maximum 4 players each team");
+        require(_blackPlayers.length < 4, "Maximum 4 players each team");
+        whitePlayers = _whitePlayers;
+        blackPlayers = _blackPlayers;
         blockFactor = _blockFactor;
         turn = false;
         isGameOver = false;
@@ -63,7 +66,15 @@ contract ChessGame {
     }
 
     function isTurnOver() internal {
-        if(voteCount >= (players.length+1)/2) {
+        uint playerCount;
+        if(turn) {
+            playerCount = blackPlayers.length;
+        }
+        else {
+            playerCount = whitePlayers.length;
+        }
+
+        if(voteCount >= playerCount) {
             makeTurn();
         }
     }
@@ -71,25 +82,26 @@ contract ChessGame {
     //Chooses a random person's move, sets board state.
     function makeTurn() internal {
         uint start;
+        address[] memory playersArray;
         if(turn == false) {
-            start = 0;
+            playersArray = whitePlayers;
         } else {
-            start = 1;
+            playersArray = blackPlayers;
         }
-        string[] memory vote = new string[]((voteCount+1)/2);
+        string[] memory votes = new string[](voteCount+1);
         uint counter = 0;
-       for(uint i = start; i < (voteCount+start)*2; i=i+2) {
-            vote[counter] = proposedMoves[players[i]];
-            proposedMoves[players[i]] = "";
+        for(uint i = start; i < voteCount; i++) {
+            votes[counter] = proposedMoves[playersArray[i]];
+            proposedMoves[playersArray[i]] = "";
             counter++;
         }
-         uint randomNumber;
+        uint randomNumber;
         if(voteCount == 1) {
             randomNumber = 0;
         } else {
             randomNumber = uint(keccak256(abi.encodePacked(blockhash(block.number-1)))) % voteCount;
         }
-        boardState.newBoardState(vote[randomNumber]);
+        boardState.newBoardState(votes[randomNumber]);
         voteCount = 0;
     }
 

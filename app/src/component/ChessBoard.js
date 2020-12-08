@@ -32,17 +32,14 @@ class ChessBoard extends React.Component {
         return "Loading FEN..."
       } else {
         chess.load(FEN.value);
+        console.log(FEN.value);
         return (
-          <div className="App">
-            <Chessground
-              turnColor={this.chessToGround(chess.turn())}
-              movable={this.calcMovable()}
-              fen={FEN.value}
-              onMove={this.onMove}
-            />
-            <br/>
-            <Button color="secondary">Submit Move</Button>
-          </div>
+          <Chessground
+            turnColor={this.chessToGround(chess.turn())}
+            movable={this.calcMovable()}
+            fen={FEN.value}
+            onMove={this.onMove}
+          />
         )
       }
     }

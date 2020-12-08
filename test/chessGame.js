@@ -9,10 +9,7 @@ contract("ChessGame", accounts => {
   it('Should initialize a chessGame contract with correctly initialised variables', async () => {
     const blockFactor = await chessGame.blockFactor.call();
     const chessFEN = await chessGame.getBoardState.call();
-    console.log(chessFEN);
-
     assert.equal(blockFactor.words[0], 50);
-    console.log(chessFEN);
     assert.equal(chessFEN, 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1')
   });
 

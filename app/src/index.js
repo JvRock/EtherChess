@@ -11,7 +11,7 @@ import BoardState from "./contracts/BoardState.json";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const options = {
-  contracts: [ChessGame],
+  contracts: [ChessGame, GameCreator],
   web3: {
     fallback: {
       type: "ws",
