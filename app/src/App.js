@@ -7,9 +7,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 
 class App extends Component {
-  state = { loading: true, drizzleState: null, existingGame: null };
-
+  state = { loading: true, drizzleState: null, existingGame: null, mma: null };
   componentDidMount() {
+
     console.log(this.props);
 
     const { drizzle } = this.props;
@@ -18,13 +18,15 @@ class App extends Component {
     this.unsubscribe = drizzle.store.subscribe(() => {
 
       // every time the store updates, grab the state from drizzle
-      const drizzleState = drizzle.store.getState();
+      var drizzleState = drizzle.store.getState();
 
       // check to see if it's ready, if so, update local component state
       if (drizzleState.drizzleStatus.initialized) {
         this.setState({ loading: false, drizzleState });
       }
     });
+
+
   }
 
   componentWillUnmount() {
@@ -33,11 +35,17 @@ class App extends Component {
 
   render() {
     var account;
+
     if (this.state.loading) return "Loading Drizzle...";
     if (this.state.drizzleState.accounts[0] === null) {
       return "Loading Metamask..." 
     } else {
+      const { drizzle } = this.props;
       account = this.state.drizzleState.accounts[0];
+      window.ethereum.on('accountsChanged', function (accounts) {
+        //drizzleState = drizzle.store.getState();
+        window.location.reload();
+      })
     }
 
     return (
