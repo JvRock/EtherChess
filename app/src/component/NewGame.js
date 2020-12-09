@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Label, Input, FormGroup, Form  } from 'reactstrap';
-
+import { Link } from "react-router-dom";
 
 class NewGame extends React.Component {
 
@@ -44,6 +44,7 @@ class NewGame extends React.Component {
 
 
   render() {
+    console.log(this.props);
     if (this.state.loading) return "Loading from Blockchain...";
     if (this.state.createGameStackId != null) {
       return this.getTxStatus();
@@ -84,7 +85,7 @@ class NewGame extends React.Component {
                     } 
                   }
                 />
-                <Button type="button" onClick={() => this.goToGame(this.state.contractAddress)}>Go to Game</Button>
+                <Link to={{pathname: "/ChessGame/" + this.state.contractAddress, state: {address: this.state.contractAddress} }}> Go to Game</Link>
               </FormGroup>
             </Form>
       )

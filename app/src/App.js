@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import NewGame from "./component/NewGame";
 import ChessBoard from "./component/ChessBoard";
-import ChessGame from "./contracts/ChessGame.json"
-import web3 from 'web3';
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 
 class App extends Component {
   state = { loading: true, drizzleState: null, existingGame: null };
@@ -31,43 +33,35 @@ class App extends Component {
 
   render() {
     var account;
-    var content;
     if (this.state.loading) return "Loading Drizzle...";
     if (this.state.drizzleState.accounts[0] === null) {
       return "Loading Metamask..." 
     } else {
       account = this.state.drizzleState.accounts[0];
     }
-    if(this.state.existingGame === null) {
-      content = (
-        <NewGame 
-          drizzle={this.props.drizzle}
-          drizzleState={this.state.drizzleState}
-        />
-      )
-    } else {
-      let contractName = "ChessGame"
-      let web3 = new Web3("http://127.0.0.1:9545")
-      let web3Contract = new web3.eth.Contract(ChessGame, existingGame) //second argument is new contract's address 
-                                                
-      let contractConfig = { contractName, web3Contract }
-      let events = ['Mint']    
-      // Using the Drizzle context object
-      this.props.drizzle.addContract(contractConfig, events)
-      content = (
-        <ChessBoard
-          drizzle={this.props.drizzle}
-          drizzleState={this.state.drizzleState}
-        />
-      )
-    }
+
     return (
       <div className="App">
         <div className="container">
           <div className="row">
             <div className="col-lg-3"></div>
               <div className="col-lg-6">
-                {content}
+                <Router>
+                  <Route exact path="/" 
+                  render={() => (
+                    <NewGame 
+                      drizzle={this.props.drizzle}
+                      drizzleState={this.state.drizzleState}/>
+                  )}
+                  />
+                  <Route path="/chessgame/:address" 
+                    render={() => (<ChessBoard           
+                      drizzle={this.props.drizzle}
+                      drizzleState={this.state.drizzleState}
+                      />
+                    )}
+                    />
+                </Router>
                 <p>Logged in Account:</p>
                 <p>{account}</p>
               </div>

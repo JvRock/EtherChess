@@ -1,14 +1,27 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import Chessground from 'react-chessground';
 import 'react-chessground/dist/styles/chessground.css';
 import Chess from "chess.js"
 import { Button } from 'reactstrap';
+import json from "../contracts/ChessGame.json"
+import Web3 from 'web3';
+import {withRouter} from 'react-router-dom';
 
 const chess = new Chess();
 class ChessBoard extends React.Component {
+
   state = { dataKey: null };
   componentDidMount() {
     const { drizzle } = this.props;
+    const { address } = this.props.match.params;
+    drizzle.addContract({
+      contractName: "ChessGame",
+      web3Contract: new drizzle.web3.eth.Contract(
+        json.abi,
+        address
+      )
+    });
     const contract = drizzle.contracts.ChessGame;
     //console.log(contract);
     // let drizzle know we want to watch the `getBoardState` method
@@ -24,7 +37,7 @@ class ChessBoard extends React.Component {
   }
 
   render() {
-    if (this.state.loading) return "Loading Drizzle...";
+    if (this.state.loading || this.props.drizzleState.contracts.ChessGame === undefined) return "Loading Drizzle...";
     else {
       const { ChessGame } = this.props.drizzleState.contracts;
       const FEN = ChessGame.getBoardState[this.state.boardDataKey];
@@ -83,12 +96,4 @@ class ChessBoard extends React.Component {
   }
 }
 
-
-
-
-
-
-
-
-
-export default ChessBoard;
+export default withRouter(ChessBoard);
