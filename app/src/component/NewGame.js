@@ -95,8 +95,10 @@ class NewGame extends React.Component {
     this.createGame(this.state.teamWhite, this.state.teamBlack, 50);
   }
 
-  goToGame() {
-    //this.state.contractAddress
+  goToGame(address) {
+    console.log("hi");
+    var existingGame = address;
+    this.setState({existingGame}); 
   }
 
   getTxStatus = () => {

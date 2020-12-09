@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewGame from "./component/NewGame";
 import ChessBoard from "./component/ChessBoard";
+import ChessGame from "./contracts/ChessGame.json"
 import web3 from 'web3';
 
 class App extends Component {
@@ -45,13 +46,14 @@ class App extends Component {
         />
       )
     } else {
-      var contractConfig = {
-        contractName: this.state.existingGame,
-        web3Contract: new web3.eth.Contract(/* ... */)
-      }
-      var events = ['Mint']
-      this.context.drizzle.addContract(contractConfig, events)
-
+      let contractName = "ChessGame"
+      let web3 = new Web3("http://127.0.0.1:9545")
+      let web3Contract = new web3.eth.Contract(ChessGame, existingGame) //second argument is new contract's address 
+                                                
+      let contractConfig = { contractName, web3Contract }
+      let events = ['Mint']    
+      // Using the Drizzle context object
+      this.props.drizzle.addContract(contractConfig, events)
       content = (
         <ChessBoard
           drizzle={this.props.drizzle}
