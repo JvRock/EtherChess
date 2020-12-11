@@ -44,6 +44,16 @@ contract ChessGame {
         gameEngine = new GameEngine();
         boardState = new BoardState();
         voteCount = 0;
+        populateTeamMapping(whitePlayers, false);
+        populateTeamMapping(blackPlayers, true);
+
+
+    }
+
+    function populateTeamMapping(address[] memory players, bool teamFlag) internal {
+        for(uint i = 0; i < players.length; i++) {
+            team[players[i]] = teamFlag;
+        }
     }
     
     function gameOver() internal {
@@ -103,6 +113,7 @@ contract ChessGame {
         }
         boardState.newBoardState(votes[randomNumber]);
         voteCount = 0;
+        turn = !turn;
     }
 
     function getBoardState() public view returns (string memory FEN) {

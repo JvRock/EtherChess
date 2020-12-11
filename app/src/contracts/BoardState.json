@@ -147,7 +147,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 41,
-        "sourceUnit": 623,
+        "sourceUnit": 668,
         "src": "67:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -162,10 +162,10 @@
               "id": 3,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 622,
+              "referencedDeclaration": 667,
               "src": "245:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$622",
+                "typeIdentifier": "t_contract$_Ownable_$667",
                 "typeString": "contract Ownable"
               }
             },
@@ -175,8 +175,8 @@
           }
         ],
         "contractDependencies": [
-          519,
-          622
+          564,
+          667
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -184,8 +184,8 @@
         "id": 40,
         "linearizedBaseContracts": [
           40,
-          622,
-          519
+          667,
+          564
         ],
         "name": "BoardState",
         "nodeType": "ContractDefinition",
@@ -509,7 +509,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 573,
+                  "referencedDeclaration": 618,
                   "src": "612:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -634,7 +634,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 41,
-        "sourceUnit": 623,
+        "sourceUnit": 668,
         "src": "67:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -649,10 +649,10 @@
               "id": 3,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 622,
+              "referencedDeclaration": 667,
               "src": "245:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$622",
+                "typeIdentifier": "t_contract$_Ownable_$667",
                 "typeString": "contract Ownable"
               }
             },
@@ -662,8 +662,8 @@
           }
         ],
         "contractDependencies": [
-          519,
-          622
+          564,
+          667
         ],
         "contractKind": "contract",
         "documentation": null,
@@ -671,8 +671,8 @@
         "id": 40,
         "linearizedBaseContracts": [
           40,
-          622,
-          519
+          667,
+          564
         ],
         "name": "BoardState",
         "nodeType": "ContractDefinition",
@@ -996,7 +996,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 573,
+                  "referencedDeclaration": 618,
                   "src": "612:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1097,7 +1097,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-09T15:17:05.428Z",
+  "updatedAt": "2020-12-10T16:53:39.108Z",
   "devdoc": {
     "methods": {
       "owner()": {
