@@ -133,7 +133,7 @@ class NewGame extends React.Component {
     const createGameStackId = contract.methods["newGame"].cacheSend(
       [teamWhite], [teamBlack], blockFactor, {
         from: drizzleState.accounts[0],
-        gas: 2000000
+        gas: 3000000
       }
     );
     this.setState({createGameStackId});

@@ -32,14 +32,14 @@
     "absolutePath": "/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol",
     "exportedSymbols": {
       "GameEngine": [
-        508
+        530
       ]
     },
-    "id": 509,
+    "id": 531,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 497,
+        "id": 519,
         "literals": [
           "solidity",
           ">=",
@@ -59,16 +59,16 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 508,
+        "id": 530,
         "linearizedBaseContracts": [
-          508
+          530
         ],
         "name": "GameEngine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 506,
+              "id": 528,
               "nodeType": "Block",
               "src": "398:30:3",
               "statements": [
@@ -76,7 +76,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 504,
+                    "id": 526,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -91,8 +91,8 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 503,
-                  "id": 505,
+                  "functionReturnParameters": 525,
+                  "id": 527,
                   "nodeType": "Return",
                   "src": "409:11:3"
                 }
@@ -100,7 +100,7 @@
             },
             "documentation": null,
             "functionSelector": "16e23104",
-            "id": 507,
+            "id": 529,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -108,16 +108,16 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 500,
+              "id": 522,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 499,
+                  "id": 521,
                   "name": "_FEN",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 507,
+                  "scope": 529,
                   "src": "348:18:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -126,7 +126,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 498,
+                    "id": 520,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "348:6:3",
@@ -142,16 +142,16 @@
               "src": "347:20:3"
             },
             "returnParameters": {
-              "id": 503,
+              "id": 525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 502,
+                  "id": 524,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 507,
+                  "scope": 529,
                   "src": "392:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -160,7 +160,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 501,
+                    "id": 523,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "392:4:3",
@@ -175,14 +175,14 @@
               ],
               "src": "391:6:3"
             },
-            "scope": 508,
+            "scope": 530,
             "src": "326:102:3",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 509,
+        "scope": 531,
         "src": "299:132:3"
       }
     ],
@@ -192,14 +192,14 @@
     "absolutePath": "/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol",
     "exportedSymbols": {
       "GameEngine": [
-        508
+        530
       ]
     },
-    "id": 509,
+    "id": 531,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 497,
+        "id": 519,
         "literals": [
           "solidity",
           ">=",
@@ -219,16 +219,16 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 508,
+        "id": 530,
         "linearizedBaseContracts": [
-          508
+          530
         ],
         "name": "GameEngine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 506,
+              "id": 528,
               "nodeType": "Block",
               "src": "398:30:3",
               "statements": [
@@ -236,7 +236,7 @@
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 504,
+                    "id": 526,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
@@ -251,8 +251,8 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 503,
-                  "id": 505,
+                  "functionReturnParameters": 525,
+                  "id": 527,
                   "nodeType": "Return",
                   "src": "409:11:3"
                 }
@@ -260,7 +260,7 @@
             },
             "documentation": null,
             "functionSelector": "16e23104",
-            "id": 507,
+            "id": 529,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -268,16 +268,16 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 500,
+              "id": 522,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 499,
+                  "id": 521,
                   "name": "_FEN",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 507,
+                  "scope": 529,
                   "src": "348:18:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
@@ -286,7 +286,7 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 498,
+                    "id": 520,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
                     "src": "348:6:3",
@@ -302,16 +302,16 @@
               "src": "347:20:3"
             },
             "returnParameters": {
-              "id": 503,
+              "id": 525,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 502,
+                  "id": 524,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 507,
+                  "scope": 529,
                   "src": "392:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
@@ -320,7 +320,7 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 501,
+                    "id": 523,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
                     "src": "392:4:3",
@@ -335,14 +335,14 @@
               ],
               "src": "391:6:3"
             },
-            "scope": 508,
+            "scope": 530,
             "src": "326:102:3",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 509,
+        "scope": 531,
         "src": "299:132:3"
       }
     ],
@@ -354,7 +354,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-10T16:53:39.114Z",
+  "updatedAt": "2020-12-13T16:35:36.542Z",
   "devdoc": {
     "methods": {}
   },

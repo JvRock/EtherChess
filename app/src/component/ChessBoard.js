@@ -26,9 +26,16 @@ class ChessBoard extends React.Component {
     //console.log(contract);
     // let drizzle know we want to watch the `getBoardState` method
     const boardDataKey = contract.methods["getBoardState"].cacheCall();
+    const turnDataKey = contract.methods["turn"].cacheCall();
+    const playersKey = contract.methods["getCurrentTeamsPlayers"].cacheCall();
+    //const blackPlayersDataKey = contract.methods["blackPlayers"].cacheCall();
+
     //console.log("hi", dataKey);
     // save the `dataKey` to local component state for later reference
     this.setState({ boardDataKey });
+    this.setState({ turnDataKey });
+    this.setState({ playersKey });
+
   }
 
   chessToGround = (turn) => {
@@ -41,18 +48,33 @@ class ChessBoard extends React.Component {
     else {
       const { ChessGame } = this.props.drizzleState.contracts;
       const FEN = ChessGame.getBoardState[this.state.boardDataKey];
-      if(FEN === undefined) {
-        return "Loading FEN..."
+      const players = ChessGame.getCurrentTeamsPlayers[this.state.playersKey];
+      if(FEN === undefined || players === undefined) {
+        return "Loading board..."
       } else {
         chess.load(FEN.value);
-        console.log(FEN.value);
-        return (
+        console.log("Loaded FEN: ", FEN.value);
+        var viewOnlyFlag = false;
+        var turn = players.value[0]
+        var turnFragment;
+        if(players.value[1].indexOf(this.props.drizzleState.accounts[0]) == -1 ) {
+          viewOnlyFlag = true;
+         turnFragment = (<h3>Not currently your turn.</h3>)
+          console.log(viewOnlyFlag);
+        } else {
+          turnFragment = (<h3>{turn}'s turn. Make a move!</h3>);
+        }
+        return (<div>
+          {turnFragment}
           <Chessground
             turnColor={this.chessToGround(chess.turn())}
             movable={this.calcMovable()}
             fen={FEN.value}
             onMove={this.onMove}
+            orientation={this.chessToGround(chess.turn())}
+            viewOnly={viewOnlyFlag}
           />
+          </div>
         )
       }
     }
@@ -83,7 +105,7 @@ class ChessBoard extends React.Component {
     chess.move({from: from, to: to});
     const { drizzle, drizzleState } = this.props;
     const contract = drizzle.contracts.ChessGame;
-    console.log(chess.fen());
+    console.log("Sending FEN: ", chess.fen());
     const setBoardStackId = contract.methods["voteTurn"].cacheSend(
       chess.fen(), 
       { 

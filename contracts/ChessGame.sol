@@ -1,5 +1,6 @@
 
 pragma solidity >=0.4.22 <0.8.0;
+pragma experimental ABIEncoderV2;
 
 import './GameEngine.sol';
 import './BoardState.sol';
@@ -48,6 +49,12 @@ contract ChessGame {
         populateTeamMapping(blackPlayers, true);
 
 
+    }
+
+    function getCurrentTeamsPlayers() public view returns(string memory turnString, address[] memory players)
+    {
+        if(turn == false) return ( "White", whitePlayers );
+        else return ( "Black", blackPlayers );
     }
 
     function populateTeamMapping(address[] memory players, bool teamFlag) internal {
