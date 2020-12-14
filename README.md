@@ -2,7 +2,8 @@
 This project is the barebones of a Chess app that stores its board state via the blockchain.
 It can create new chess games, with multiple participants, creating the contract under the address that calls the new game function.
 The front-end provides the interactive chessboard (using ChessGround and chess.js), the blockchain provides the storage and turn functionality.
-A chess engine would ideally be put onto the blockchain, either directly via solidity, or perhaps via an oracle node due to gas costs.
+
+It is missing rules functionality, and currently accepts any FEN string, further extensions would explore this, perhaps with rules onto the blockchain, either directly via solidity or via an oracle node.
 
 ## Directory Structure
 - Base directory (truffle project), readme
@@ -16,11 +17,12 @@ A chess engine would ideally be put onto the blockchain, either directly via sol
 - test (solidity contract tests)
 
 ## How to run locally
-Run an npm instal
+Run an npm install
 `npm install`
-Run truffle from the base directory
-`truffle develop`
+Run ganache from the base directory
+`ganache-cli`
 Then run a truffle migrate to compile/deploy to local ganache
+`truffle compile`
 `truffle migrate`
 
 CD into the app directory for the front-end
@@ -40,3 +42,10 @@ Use metamask to interact with the front-end.
 - Truffle framework
 - React (CRA) front-end
     - Drizzle for responsive behaviour
+
+
+## Library
+Uses Ownable from openzeppelin
+
+## Tests
+Tests were written to cover as much functionality as required, as well as bad paths for key functions (e.g. The wrong user trying to make their turn, or someone trying to kill the contract)

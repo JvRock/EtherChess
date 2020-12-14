@@ -39,7 +39,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -52,7 +53,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -65,7 +67,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -78,7 +81,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -97,7 +101,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -110,7 +115,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -129,7 +135,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -142,7 +149,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -160,7 +168,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -186,7 +195,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_whitePlayers\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"_blackPlayers\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_blockFactor\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"blackPlayers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"blockFactor\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getBoardState\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"FEN\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getCurrentTeamsPlayers\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"turnString\",\"type\":\"string\"},{\"internalType\":\"address[]\",\"name\":\"players\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isGameOver\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"lastMove\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"team\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"turn\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_proposedMove\",\"type\":\"string\"}],\"name\":\"voteTurn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"whitePlayers\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"winner\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Jaan Smith\",\"details\":\"A lot of the basic functionality of chess is missing here,  experimentation required to see if this can be done on chain, perhaps oracle nodes instead?\",\"methods\":{\"constructor\":{\"author\":\"Jaan Smith\",\"params\":{\"_blackPlayers\":\"is an array of addresses representing the players for the black pieces\",\"_blockFactor\":\"represents the amount of blocks that can pass before timing a team out\",\"_whitePlayers\":\"is an array of addresses representing the players for the white pieces\"}},\"getBoardState()\":{\"author\":\"Jaan Smith\",\"returns\":{\"FEN\":\"string of the board state\"}},\"getCurrentTeamsPlayers()\":{\"author\":\"Jaan Smith\",\"details\":\"May be some bugs lurking in this to do with block validation\",\"returns\":{\"turnString\":\"A string representing which colour's turn it is, and The array containing the current team's players whos turn it is\"}},\"voteTurn(string)\":{\"author\":\"Jaan Smith\",\"details\":\"currently takes any string as on-chain validation is an extension that was not implemented\",\"params\":{\"_proposedMove\":\"is the FEN representation of the new board state should this turn become validated\"}}},\"title\":\"A Class representing a chess game\"},\"userdoc\":{\"methods\":{\"constructor\":\"Constructor for the ChessGame contract Maximum 4 players per team, initialises external contracts\",\"getBoardState()\":{\"notice\":\"Returns the FEN representation of the current chess board, from an external contract\"},\"getCurrentTeamsPlayers()\":{\"notice\":\"Returns the object representing the current team's players\"},\"voteTurn(string)\":{\"notice\":\"Provides a proposed move from a particular address, also triggers end of turn and other logic Depending on the state of other variables (e.g. can end a turn based on total votes, or block time)\"}},\"notice\":\"This class does not implement all chess functionality, currently an unoptimised Stub\"}},\"settings\":{\"compilationTarget\":{\"/E/dev/Consensys Course/EtherChess/contracts/ChessGame.sol\":\"ChessGame\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/dev/Consensys Course/EtherChess/contracts/BoardState.sol\":{\"keccak256\":\"0xd64823b7a57699d9ac727cf06eebf1b93505f0f58816ad301c04bee5cded813b\",\"urls\":[\"bzz-raw://c35f7d65b01ba6bcfa9a0c7f1bf4f3d4cd99b18da20303dbaa01e211be3fedee\",\"dweb:/ipfs/QmSyqUbPm2Q2uPnPvmyKJgrMZcKs27bC5v2LrTvGHTP5sK\"]},\"/E/dev/Consensys Course/EtherChess/contracts/ChessGame.sol\":{\"keccak256\":\"0xdc3dbcf828206d69f0c084637f9fbe2dfacdac72de4295923421e8ec5b57f598\",\"urls\":[\"bzz-raw://c52d35d0c9b5a44176aba082bcb8ffc2fc12f7ee0232b7c556dc007dd3c6126d\",\"dweb:/ipfs/Qmd1Tf7FXtRMR2bfriq3D2V69TMAjqQu7z4BLbc8au77Ph\"]},\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":{\"keccak256\":\"0x3151d35c830870e2dc04f93a755582de10dc8a1356a514ab113c316f5449c8c0\",\"urls\":[\"bzz-raw://f7e1fe8114bd39a4f07fc6b9c2fe4b5e91ce9bfa3a3bf7b0ec38fe78c5c5623c\",\"dweb:/ipfs/Qmbg13zgt6gaMsqWoxUoHGoYQKNUyEjANEt88dbb5NdGeg\"]},\"@openzeppelin/contracts/GSN/Context.sol\":{\"keccak256\":\"0x8d3cb350f04ff49cfb10aef08d87f19dcbaecc8027b0bed12f3275cd12f38cf0\",\"urls\":[\"bzz-raw://ded47ec7c96750f9bd04bbbc84f659992d4ba901cb7b532a52cd468272cf378f\",\"dweb:/ipfs/QmfBrGtQP7rZEqEg6Wz6jh2N2Kukpj1z5v3CGWmAqrzm96\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0xf7c39c7e6d06ed3bda90cfefbcbf2ddc32c599c3d6721746546ad64946efccaa\",\"urls\":[\"bzz-raw://cb57a28e189cd8b05748db44bdd51d608e6f1364dd1b35ad921e1bc82c10631e\",\"dweb:/ipfs/QmaWWTBbVu2pRR9XUbE4iC159NoP59cRF9ZJwhf4ghFN9i\"]}},\"version\":1}",
@@ -10697,11 +10707,23 @@
       "events": {},
       "links": {},
       "address": "0x025E1a345719545FB31728Fd9a20602c1D88115D",
-      "transactionHash": "0x336854f686fb68d74dea071181ba7f331078e7956dbb18d54d44aec8a6c2435b"
+      "transactionHash": "0x488af39b35af0ada868de22910a1e98e63162b63023a1b21c21462fba06f93ec"
+    },
+    "7001": {
+      "events": {},
+      "links": {},
+      "address": "0x532c9657d053A94406995655315aC96cE3c2DcBB",
+      "transactionHash": "0xcd1ce0d836a6a2e736f4078f9643ff299c8070e7bafce79f4ba00fa5ffe86a39"
+    },
+    "1607962625344": {
+      "events": {},
+      "links": {},
+      "address": "0x498434625Da7f337272Fd69a07E7cEa6373e4A9F",
+      "transactionHash": "0xa68fa911726b3fea39e42d8e94fd26c7964d84b35a63c40919a09de3740d11b6"
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-14T15:26:27.480Z",
+  "updatedAt": "2020-12-14T16:25:49.069Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "Jaan Smith",
