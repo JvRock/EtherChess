@@ -41,57 +41,20 @@ class NewGame extends React.Component {
     console.log(this.state);
   }
 
-
-
   render() {
     console.log(this.props);
-    if (this.state.loading) return "Loading from Blockchain...";
-    if (this.state.createGameStackId != null) {
-      return this.getTxStatus();
+    var renderObject;
+
+    if (this.state.loading) {
+      return "Loading from Blockchain...";
+    } else if (this.state.createGameStackId != null) {
+      return [this.getTxStatus(), this.makeSubmitFragment()]
     }
     else {
-      // get the contract state from drizzleState
-      const { GameCreator } = this.props.drizzleState.contracts;
-      // using the saved `dataKey`, get the variable we're interested in
-      const gameSize = GameCreator.getGamesSize[this.state.gameSizeKey];
-
-      // if it exists, then we display its value
-      const formGroup = (
-            <Form>
-              <FormGroup>
-                <Label for="teamWhite">Enter White's Ethereum Public Key</Label>
-                <Input type="textarea" name="teamWhite" id="teamWhite" 
-                  onChange={
-                    (e) => {
-                      this.handleChange(e)
-                    } 
-                  }
-                />
-                <Label for="teamBlack">Enter Black's Ethereum Public Key</Label>
-                <Input type="textarea" name="teamBlack" id="teamBlack" 
-                  onChange={
-                    (e) => {
-                      this.handleChange(e)
-                    } 
-                  }
-                />
-                <Button type="button" onClick={() => this.createGame(this.state.teamWhite, this.state.teamBlack, 50)}>Create new Game</Button>
-                <br/>
-                <Label for="contractAddress">Or enter an existing contract code</Label>
-                <Input type="textarea" name="contractAddress" id="contractAddress" 
-                  onChange={
-                    (e) => {
-                      this.handleChange(e)
-                    } 
-                  }
-                />
-                <Link to={{pathname: "/ChessGame/" + this.state.contractAddress, state: {address: this.state.contractAddress} }}> Go to Game</Link>
-              </FormGroup>
-            </Form>
-      )
-      return formGroup;
+      return [this.makeFormGroup(),this.makeSubmitFragment()]; // if it exists, then we display its value
     }
   }
+
   handleClick() {
     this.createGame(this.state.teamWhite, this.state.teamBlack, 50);
   }
@@ -100,6 +63,57 @@ class NewGame extends React.Component {
     console.log("hi");
     var existingGame = address;
     this.setState({existingGame}); 
+  }
+
+  makeFormGroup = () => {
+    // get the contract state from drizzleState
+    const { GameCreator } = this.props.drizzleState.contracts;
+    // using the saved `dataKey`, get the variable we're interested in
+    const gameSize = GameCreator.getGamesSize[this.state.gameSizeKey];
+    return (<Form>
+    <FormGroup>
+      <Label for="teamWhite">Enter White's Ethereum Public Key</Label>
+      <Input type="textarea" name="teamWhite" id="teamWhite" 
+        onChange={
+          (e) => {
+            this.handleChange(e)
+          } 
+        }
+      />
+      <Label for="teamBlack">Enter Black's Ethereum Public Key</Label>
+      <Input type="textarea" name="teamBlack" id="teamBlack" 
+        onChange={
+          (e) => {
+            this.handleChange(e)
+          } 
+        }
+      />
+      <Button type="button" onClick={() => this.createGame(this.state.teamWhite, this.state.teamBlack, 50)}>Create new Game</Button>
+      <br/>
+      <Label for="contractAddress">Or enter an existing contract code</Label>
+    </FormGroup>
+  </Form>)
+  }
+
+  makeSubmitFragment = () => {
+    return (
+      <Form>
+      <FormGroup>
+      <Input type="textarea" name="contractAddress" id="contractAddress" 
+        onChange={
+          (e) => {
+            this.handleChange(e)
+          } 
+        }
+      />
+      <Link to={{pathname: "/ChessGame/" + this.state.contractAddress, state: {address: this.state.contractAddress} }}> 
+          <Button>
+            Go to Game
+          </Button>
+        </Link>
+      </FormGroup>
+    </Form>
+    )
   }
 
   getTxStatus = () => {
