@@ -33,6 +33,12 @@ contract GameCreator is Ownable {
         return address(chessGame);
     }
 
+    /// @author Jaan Smith
+    /// @notice Destroys the contract, returning any potential funds to the owner
+    function kill() public onlyOwner {
+        if(msg.sender == owner()) selfdestruct(address(uint160(owner()))); 
+    }
+
 
     /// @author Jaan Smith
     /// @notice Returns the current size of the games variable
