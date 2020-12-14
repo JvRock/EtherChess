@@ -23,14 +23,12 @@ class ChessBoard extends React.Component {
       )
     });
     const contract = drizzle.contracts.ChessGame;
-    //console.log(contract);
     // let drizzle know we want to watch the `getBoardState` method
     const boardDataKey = contract.methods["getBoardState"].cacheCall();
     const turnDataKey = contract.methods["turn"].cacheCall();
     const playersKey = contract.methods["getCurrentTeamsPlayers"].cacheCall();
     //const blackPlayersDataKey = contract.methods["blackPlayers"].cacheCall();
 
-    //console.log("hi", dataKey);
     // save the `dataKey` to local component state for later reference
     this.setState({ boardDataKey });
     this.setState({ turnDataKey });
@@ -53,14 +51,12 @@ class ChessBoard extends React.Component {
         return "Loading board..."
       } else {
         chess.load(FEN.value);
-        console.log("Loaded FEN: ", FEN.value);
         var viewOnlyFlag = false;
         var turn = players.value[0]
         var turnFragment;
         if(players.value[1].indexOf(this.props.drizzleState.accounts[0]) == -1 ) {
           viewOnlyFlag = true;
          turnFragment = (<h3>Not currently your turn.</h3>)
-          console.log(viewOnlyFlag);
         } else {
           turnFragment = (<h3>{turn}'s turn. Make a move!</h3>);
         }
@@ -105,7 +101,6 @@ class ChessBoard extends React.Component {
     chess.move({from: from, to: to});
     const { drizzle, drizzleState } = this.props;
     const contract = drizzle.contracts.ChessGame;
-    console.log("Sending FEN: ", chess.fen());
     const setBoardStackId = contract.methods["voteTurn"].cacheSend(
       chess.fen(), 
       { 

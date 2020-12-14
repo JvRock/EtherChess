@@ -10,8 +10,6 @@ class App extends Component {
   state = { loading: true, drizzleState: null, existingGame: null, mma: null };
   componentDidMount() {
 
-    console.log(this.props);
-
     const { drizzle } = this.props;
 
     // subscribe to changes in the store

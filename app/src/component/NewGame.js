@@ -38,12 +38,9 @@ class NewGame extends React.Component {
     await this.setState({
       [ name ]: value,
     });
-    console.log(this.state);
   }
 
   render() {
-    console.log(this.props);
-    var renderObject;
 
     if (this.state.loading) {
       return "Loading from Blockchain...";
@@ -60,7 +57,6 @@ class NewGame extends React.Component {
   }
 
   goToGame(address) {
-    console.log("hi");
     var existingGame = address;
     this.setState({existingGame}); 
   }
@@ -125,14 +121,12 @@ class NewGame extends React.Component {
 
     // if transaction hash does not exist, don't display anything
     if (!txHash || transactions[txHash] === undefined) return null;
-    console.log(transactions[txHash]);
     // otherwise, return the transaction status
     const { GameCreator } = this.props.drizzleState.contracts;
     if(transactions[txHash].status != "success") {
       return "transaction error";
     } else {
       const existingGame = GameCreator.latestGame[this.state.latestGame];
-      console.log(existingGame);
       const returnStatement = (
           `Transaction Success! New Contract is: ${existingGame.value}. Write it down, and Enter it into the box below to play Chess`
       );
@@ -141,7 +135,6 @@ class NewGame extends React.Component {
   }
 
   createGame = (teamWhite, teamBlack, blockFactor) => {
-    console.log([teamWhite], teamBlack, blockFactor);
     const { drizzle, drizzleState } = this.props;
     const contract = drizzle.contracts.GameCreator;
     const createGameStackId = contract.methods["newGame"].cacheSend(
