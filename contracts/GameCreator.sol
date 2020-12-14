@@ -3,13 +3,21 @@ pragma solidity >=0.4.22 <0.8.0;
 import './ChessGame.sol';
 /// @title A contract that initialises new ChessGames, giving users their own chess game
 /// @author Jaan Smith
-contract GameCreator {
-
+contract GameCreator is Ownable {
+    //Circuit breaker variable
+    bool public stopped = false;
+    modifier stopInEmergency { require(!stopped, "Contract is stopped" ); _; }
+        
     ///Would not be implemented in "live" as this would get too large if the app became popular
     ///Could be replaced with a database, or with people recording their own game's addresses to plug into the app
     address[] public games;
     ///This exists only as a source to retrieve the latest game, incase a user forgets their latest address
     mapping(address => address) public latestGame;
+
+    /// @author Jaan Smith
+    /// @notice Constructor used for ownable function
+    constructor() public Ownable() {
+    }
 
     /// @author Jaan Smith
     /// @notice Creates a new game, initialising new contracts for the chess game, and a new board state
@@ -18,7 +26,7 @@ contract GameCreator {
     /// @param _blackPlayers is an array of addresses representing the players for the black pieces
     /// @param _blockFactor represents the amount of blocks that can pass before timing a team out
     /// @return newContract - the address of the new ChessGame contract owned by the msg.sender
-    function newGame(address[] memory _whitePlayers, address[] memory _blackPlayers, uint _blockFactor) public returns(address newContract) {
+    function newGame(address[] memory _whitePlayers, address[] memory _blackPlayers, uint _blockFactor) stopInEmergency public returns(address newContract) {
         ChessGame chessGame = new ChessGame(_whitePlayers, _blackPlayers, _blockFactor);
         games.push(address(chessGame));
         latestGame[msg.sender] = address(chessGame);
@@ -30,8 +38,15 @@ contract GameCreator {
     /// @notice Returns the current size of the games variable
     /// @dev probably converted to a uint in a vinal build just to track new games, instead of tracking the existing array
     /// @return size of the games array
-    function getGamesSize() public view returns (uint size){
+    function getGamesSize() public view returns (uint size) {
         return games.length;
+    }
+
+    /// @author Jaan Smith
+    /// @notice Flips the active state of the contract, active/inactive
+    /// @dev Used for circuit breaker function
+    function toggleActive() public onlyOwner {
+        stopped = !stopped;
     }
 
 }

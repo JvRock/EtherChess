@@ -20,7 +20,7 @@ contract("ChessGame", accounts => {
   it('Should return the correct team players', async () => {
     assert.equal(await chessGame.blackPlayers.call(0), accounts[1]);
     assert.equal(await chessGame.whitePlayers.call(0), accounts[0]);
-  })
+  });
 
   it('Should be able to vote, but not if its not your turn', async () => {
     await chessGame.voteTurn(

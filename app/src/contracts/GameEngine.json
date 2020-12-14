@@ -21,25 +21,25 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_FEN\",\"type\":\"string\"}],\"name\":\"evaluateMove\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":\"GameEngine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":{\"keccak256\":\"0xcbd711b08908f655cd7debdcc6838e8659698c50b79e25355a4498caa0daf273\",\"urls\":[\"bzz-raw://4e1388684831274723fcf052cae5877a06f1bbb856b29cec265d6da8dc185f75\",\"dweb:/ipfs/QmSNJwEzrvCxRYXaNZ9SExBe3RWwd7qZHXECm1ynWqQW32\"]}},\"version\":1}",
-  "bytecode": "0x608060405234801561001057600080fd5b5061012f806100206000396000f3fe608060405260043610601c5760003560e01c806316e23104146021575b600080fd5b60d460048036036020811015603557600080fd5b8101908080359060200190640100000000811115605157600080fd5b820183602082011115606257600080fd5b80359060200191846001830284011164010000000083111715608357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505060ee565b604051808215151515815260200191505060405180910390f35b60006001905091905056fea2646970667358221220461f76442ae2792610521125885cfec9f105a8be20c628a6008217b36d0b187c64736f6c63430006010033",
-  "deployedBytecode": "0x608060405260043610601c5760003560e01c806316e23104146021575b600080fd5b60d460048036036020811015603557600080fd5b8101908080359060200190640100000000811115605157600080fd5b820183602082011115606257600080fd5b80359060200191846001830284011164010000000083111715608357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505060ee565b604051808215151515815260200191505060405180910390f35b60006001905091905056fea2646970667358221220461f76442ae2792610521125885cfec9f105a8be20c628a6008217b36d0b187c64736f6c63430006010033",
-  "sourceMap": "299:132:3:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;299:132:3;;;;;;;",
-  "deployedSourceMap": "299:132:3:-:0;;;;;;;;;;;;;;;;;;;;;326:102;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;326:102:3;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;326:102:3;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;326:102:3;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;326:102:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;326:102:3;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;392:4;416;409:11;;326:102;;;:::o",
-  "source": "pragma solidity >=0.4.22 <0.8.0;\r\n/*A stub contract that would usually evaluate proposed moves and allow/disallow them\r\n    At this point, due to time constraints, this simply evaluates to true allowing illegal moves\r\n    the front-end disallows incorrect moves, but this can easily be bypassed */\r\ncontract GameEngine {\r\n    function evaluateMove(string memory _FEN) public payable returns (bool) {\r\n        return true;\r\n    }\r\n}\r\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"string\",\"name\":\"_FEN\",\"type\":\"string\"}],\"name\":\"evaluateMove\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Jaan Smith\",\"details\":\"At this point this simply evaluates to true allowing illegal moves the front-end disallows incorrect moves, but this can easily be bypassed\",\"methods\":{},\"title\":\"Move evaluator\"},\"userdoc\":{\"methods\":{},\"notice\":\"A stub contract that would usually evaluate proposed moves and allow/disallow them\"}},\"settings\":{\"compilationTarget\":{\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":\"GameEngine\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol\":{\"keccak256\":\"0x3151d35c830870e2dc04f93a755582de10dc8a1356a514ab113c316f5449c8c0\",\"urls\":[\"bzz-raw://f7e1fe8114bd39a4f07fc6b9c2fe4b5e91ce9bfa3a3bf7b0ec38fe78c5c5623c\",\"dweb:/ipfs/Qmbg13zgt6gaMsqWoxUoHGoYQKNUyEjANEt88dbb5NdGeg\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061012f806100206000396000f3fe608060405260043610601c5760003560e01c806316e23104146021575b600080fd5b60d460048036036020811015603557600080fd5b8101908080359060200190640100000000811115605157600080fd5b820183602082011115606257600080fd5b80359060200191846001830284011164010000000083111715608357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505060ee565b604051808215151515815260200191505060405180910390f35b60006001905091905056fea2646970667358221220ba584a610edfb96e90f568da9c9ffb7ddd191f154bdb55332c9773c5ac901faa64736f6c63430006010033",
+  "deployedBytecode": "0x608060405260043610601c5760003560e01c806316e23104146021575b600080fd5b60d460048036036020811015603557600080fd5b8101908080359060200190640100000000811115605157600080fd5b820183602082011115606257600080fd5b80359060200191846001830284011164010000000083111715608357600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f82011690508083019250505050505050919291929050505060ee565b604051808215151515815260200191505060405180910390f35b60006001905091905056fea2646970667358221220ba584a610edfb96e90f568da9c9ffb7ddd191f154bdb55332c9773c5ac901faa64736f6c63430006010033",
+  "sourceMap": "338:132:3:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;338:132:3;;;;;;;",
+  "deployedSourceMap": "338:132:3:-:0;;;;;;;;;;;;;;;;;;;;;365:102;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;365:102:3;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;365:102:3;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;365:102:3;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;365:102:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;365:102:3;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;431:4;455;448:11;;365:102;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.8.0;\r\n\r\n/// @title Move evaluator\r\n/// @author Jaan Smith\r\n/// @notice A stub contract that would usually evaluate proposed moves and allow/disallow them\r\n/// @dev At this point this simply evaluates to true allowing illegal moves\r\n/// the front-end disallows incorrect moves, but this can easily be bypassed\r\ncontract GameEngine {\r\n    function evaluateMove(string memory _FEN) public payable returns (bool) {\r\n        return true;\r\n    }\r\n}\r\n",
   "sourcePath": "E:\\dev\\Consensys Course\\EtherChess\\contracts\\GameEngine.sol",
   "ast": {
     "absolutePath": "/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol",
     "exportedSymbols": {
       "GameEngine": [
-        530
+        557
       ]
     },
-    "id": 531,
+    "id": 558,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 519,
+        "id": 546,
         "literals": [
           "solidity",
           ">=",
@@ -57,33 +57,33 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
+        "documentation": "@title Move evaluator\n @author Jaan Smith\n @notice A stub contract that would usually evaluate proposed moves and allow/disallow them\n @dev At this point this simply evaluates to true allowing illegal moves\n the front-end disallows incorrect moves, but this can easily be bypassed",
         "fullyImplemented": true,
-        "id": 530,
+        "id": 557,
         "linearizedBaseContracts": [
-          530
+          557
         ],
         "name": "GameEngine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 528,
+              "id": 555,
               "nodeType": "Block",
-              "src": "398:30:3",
+              "src": "437:30:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 526,
+                    "id": 553,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "416:4:3",
+                    "src": "455:4:3",
                     "subdenomination": null,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -91,16 +91,16 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 525,
-                  "id": 527,
+                  "functionReturnParameters": 552,
+                  "id": 554,
                   "nodeType": "Return",
-                  "src": "409:11:3"
+                  "src": "448:11:3"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "16e23104",
-            "id": 529,
+            "id": 556,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -108,17 +108,17 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 522,
+              "id": 549,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 521,
+                  "id": 548,
                   "name": "_FEN",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 529,
-                  "src": "348:18:3",
+                  "scope": 556,
+                  "src": "387:18:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -126,10 +126,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 520,
+                    "id": 547,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "348:6:3",
+                    "src": "387:6:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -139,20 +139,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "347:20:3"
+              "src": "386:20:3"
             },
             "returnParameters": {
-              "id": 525,
+              "id": 552,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 524,
+                  "id": 551,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 529,
-                  "src": "392:4:3",
+                  "scope": 556,
+                  "src": "431:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -160,10 +160,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 523,
+                    "id": 550,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "392:4:3",
+                    "src": "431:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -173,33 +173,33 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "391:6:3"
+              "src": "430:6:3"
             },
-            "scope": 530,
-            "src": "326:102:3",
+            "scope": 557,
+            "src": "365:102:3",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 531,
-        "src": "299:132:3"
+        "scope": 558,
+        "src": "338:132:3"
       }
     ],
-    "src": "0:433:3"
+    "src": "0:472:3"
   },
   "legacyAST": {
     "absolutePath": "/E/dev/Consensys Course/EtherChess/contracts/GameEngine.sol",
     "exportedSymbols": {
       "GameEngine": [
-        530
+        557
       ]
     },
-    "id": 531,
+    "id": 558,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 519,
+        "id": 546,
         "literals": [
           "solidity",
           ">=",
@@ -217,33 +217,33 @@
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": null,
+        "documentation": "@title Move evaluator\n @author Jaan Smith\n @notice A stub contract that would usually evaluate proposed moves and allow/disallow them\n @dev At this point this simply evaluates to true allowing illegal moves\n the front-end disallows incorrect moves, but this can easily be bypassed",
         "fullyImplemented": true,
-        "id": 530,
+        "id": 557,
         "linearizedBaseContracts": [
-          530
+          557
         ],
         "name": "GameEngine",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 528,
+              "id": 555,
               "nodeType": "Block",
-              "src": "398:30:3",
+              "src": "437:30:3",
               "statements": [
                 {
                   "expression": {
                     "argumentTypes": null,
                     "hexValue": "74727565",
-                    "id": 526,
+                    "id": 553,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "bool",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "416:4:3",
+                    "src": "455:4:3",
                     "subdenomination": null,
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
@@ -251,16 +251,16 @@
                     },
                     "value": "true"
                   },
-                  "functionReturnParameters": 525,
-                  "id": 527,
+                  "functionReturnParameters": 552,
+                  "id": 554,
                   "nodeType": "Return",
-                  "src": "409:11:3"
+                  "src": "448:11:3"
                 }
               ]
             },
             "documentation": null,
             "functionSelector": "16e23104",
-            "id": 529,
+            "id": 556,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
@@ -268,17 +268,17 @@
             "nodeType": "FunctionDefinition",
             "overrides": null,
             "parameters": {
-              "id": 522,
+              "id": 549,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 521,
+                  "id": 548,
                   "name": "_FEN",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 529,
-                  "src": "348:18:3",
+                  "scope": 556,
+                  "src": "387:18:3",
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -286,10 +286,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 520,
+                    "id": 547,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "348:6:3",
+                    "src": "387:6:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -299,20 +299,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "347:20:3"
+              "src": "386:20:3"
             },
             "returnParameters": {
-              "id": 525,
+              "id": 552,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 524,
+                  "id": 551,
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "overrides": null,
-                  "scope": 529,
-                  "src": "392:4:3",
+                  "scope": 556,
+                  "src": "431:4:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -320,10 +320,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 523,
+                    "id": 550,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "392:4:3",
+                    "src": "431:4:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -333,20 +333,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "391:6:3"
+              "src": "430:6:3"
             },
-            "scope": 530,
-            "src": "326:102:3",
+            "scope": 557,
+            "src": "365:102:3",
             "stateMutability": "payable",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 531,
-        "src": "299:132:3"
+        "scope": 558,
+        "src": "338:132:3"
       }
     ],
-    "src": "0:433:3"
+    "src": "0:472:3"
   },
   "compiler": {
     "name": "solc",
@@ -354,11 +354,15 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-14T07:34:49.609Z",
+  "updatedAt": "2020-12-14T12:50:34.239Z",
   "devdoc": {
-    "methods": {}
+    "author": "Jaan Smith",
+    "details": "At this point this simply evaluates to true allowing illegal moves the front-end disallows incorrect moves, but this can easily be bypassed",
+    "methods": {},
+    "title": "Move evaluator"
   },
   "userdoc": {
-    "methods": {}
+    "methods": {},
+    "notice": "A stub contract that would usually evaluate proposed moves and allow/disallow them"
   }
 }
