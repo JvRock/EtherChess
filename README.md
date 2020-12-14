@@ -5,6 +5,9 @@ The front-end provides the interactive chessboard (using ChessGround and chess.j
 
 It is missing rules functionality, and currently accepts any FEN string, further extensions would explore this, perhaps with rules onto the blockchain, either directly via solidity or via an oracle node.
 
+## Demonstration video
+Located in the root directory named chess_demonstration.mp4
+
 ## Directory Structure
 - Base directory (truffle project), readme
     - assorted readme files/design choices
@@ -15,6 +18,7 @@ It is missing rules functionality, and currently accepts any FEN string, further
 - contracts (solidity contracts)
 - migrations (truffle migrations)
 - test (solidity contract tests)
+- chess_demonstration.mp4 (demonstration video)
 
 ## How to run locally
 Run an npm install
