@@ -226,7 +226,7 @@
         "id": 43,
         "nodeType": "ImportDirective",
         "scope": 450,
-        "sourceUnit": 558,
+        "sourceUnit": 587,
         "src": "38:26:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -247,7 +247,7 @@
         "baseContracts": [],
         "contractDependencies": [
           40,
-          557
+          586
         ],
         "contractKind": "contract",
         "documentation": "@title A Class representing a chess game\n @author Jaan Smith\n @notice This class does not implement all chess functionality, currently an unoptimised Stub\n @dev A lot of the basic functionality of chess is missing here, \n experimentation required to see if this can be done on chain, perhaps oracle nodes instead?",
@@ -299,7 +299,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_GameEngine_$557",
+              "typeIdentifier": "t_contract$_GameEngine_$586",
               "typeString": "contract GameEngine"
             },
             "typeName": {
@@ -307,10 +307,10 @@
               "id": 47,
               "name": "GameEngine",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 557,
+              "referencedDeclaration": 586,
               "src": "487:10:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_GameEngine_$557",
+                "typeIdentifier": "t_contract$_GameEngine_$586",
                 "typeString": "contract GameEngine"
               }
             },
@@ -792,10 +792,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "1733:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -925,10 +925,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "1808:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1276,7 +1276,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 721,
+                        "referencedDeclaration": 750,
                         "src": "2086:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -1324,7 +1324,7 @@
                       "referencedDeclaration": 48,
                       "src": "2109:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GameEngine_$557",
+                        "typeIdentifier": "t_contract$_GameEngine_$586",
                         "typeString": "contract GameEngine"
                       }
                     },
@@ -1343,7 +1343,7 @@
                         "nodeType": "NewExpression",
                         "src": "2122:14:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_GameEngine_$557_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_GameEngine_$586_$",
                           "typeString": "function () returns (contract GameEngine)"
                         },
                         "typeName": {
@@ -1351,10 +1351,10 @@
                           "id": 133,
                           "name": "GameEngine",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 557,
+                          "referencedDeclaration": 586,
                           "src": "2126:10:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_GameEngine_$557",
+                            "typeIdentifier": "t_contract$_GameEngine_$586",
                             "typeString": "contract GameEngine"
                           }
                         }
@@ -1370,13 +1370,13 @@
                       "src": "2122:16:1",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GameEngine_$557",
+                        "typeIdentifier": "t_contract$_GameEngine_$586",
                         "typeString": "contract GameEngine"
                       }
                     },
                     "src": "2109:29:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_GameEngine_$557",
+                      "typeIdentifier": "t_contract$_GameEngine_$586",
                       "typeString": "contract GameEngine"
                     }
                   },
@@ -2603,10 +2603,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "4090:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2671,7 +2671,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 731,
+                              "referencedDeclaration": 760,
                               "src": "4184:3:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2758,10 +2758,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "4171:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2865,7 +2865,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 721,
+                          "referencedDeclaration": 750,
                           "src": "4316:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -3108,7 +3108,7 @@
                               "referencedDeclaration": 48,
                               "src": "4436:10:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_GameEngine_$557",
+                                "typeIdentifier": "t_contract$_GameEngine_$586",
                                 "typeString": "contract GameEngine"
                               }
                             },
@@ -3119,7 +3119,7 @@
                             "lValueRequested": false,
                             "memberName": "evaluateMove",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 556,
+                            "referencedDeclaration": 585,
                             "src": "4436:23:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_payable$_t_string_memory_ptr_$returns$_t_bool_$",
@@ -3179,10 +3179,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 734,
+                      "referencedDeclaration": 763,
                       "src": "4428:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -3240,7 +3240,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 731,
+                          "referencedDeclaration": 760,
                           "src": "4508:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -4775,7 +4775,7 @@
                                                   "name": "block",
                                                   "nodeType": "Identifier",
                                                   "overloadedDeclarations": [],
-                                                  "referencedDeclaration": 721,
+                                                  "referencedDeclaration": 750,
                                                   "src": "5844:5:1",
                                                   "typeDescriptions": {
                                                     "typeIdentifier": "t_magic_block",
@@ -4834,7 +4834,7 @@
                                             "name": "blockhash",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 722,
+                                            "referencedDeclaration": 751,
                                             "src": "5834:9:1",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_function_blockhash_view$_t_uint256_$returns$_t_bytes32_$",
@@ -4870,7 +4870,7 @@
                                           "name": "abi",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 718,
+                                          "referencedDeclaration": 747,
                                           "src": "5817:3:1",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_abi",
@@ -4918,7 +4918,7 @@
                                     "name": "keccak256",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 725,
+                                    "referencedDeclaration": 754,
                                     "src": "5807:9:1",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -5472,7 +5472,7 @@
         "id": 43,
         "nodeType": "ImportDirective",
         "scope": 450,
-        "sourceUnit": 558,
+        "sourceUnit": 587,
         "src": "38:26:1",
         "symbolAliases": [],
         "unitAlias": ""
@@ -5493,7 +5493,7 @@
         "baseContracts": [],
         "contractDependencies": [
           40,
-          557
+          586
         ],
         "contractKind": "contract",
         "documentation": "@title A Class representing a chess game\n @author Jaan Smith\n @notice This class does not implement all chess functionality, currently an unoptimised Stub\n @dev A lot of the basic functionality of chess is missing here, \n experimentation required to see if this can be done on chain, perhaps oracle nodes instead?",
@@ -5545,7 +5545,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_GameEngine_$557",
+              "typeIdentifier": "t_contract$_GameEngine_$586",
               "typeString": "contract GameEngine"
             },
             "typeName": {
@@ -5553,10 +5553,10 @@
               "id": 47,
               "name": "GameEngine",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 557,
+              "referencedDeclaration": 586,
               "src": "487:10:1",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_GameEngine_$557",
+                "typeIdentifier": "t_contract$_GameEngine_$586",
                 "typeString": "contract GameEngine"
               }
             },
@@ -6038,10 +6038,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "1733:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6171,10 +6171,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "1808:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -6522,7 +6522,7 @@
                         "name": "block",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 721,
+                        "referencedDeclaration": 750,
                         "src": "2086:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
@@ -6570,7 +6570,7 @@
                       "referencedDeclaration": 48,
                       "src": "2109:10:1",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GameEngine_$557",
+                        "typeIdentifier": "t_contract$_GameEngine_$586",
                         "typeString": "contract GameEngine"
                       }
                     },
@@ -6589,7 +6589,7 @@
                         "nodeType": "NewExpression",
                         "src": "2122:14:1",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_GameEngine_$557_$",
+                          "typeIdentifier": "t_function_creation_nonpayable$__$returns$_t_contract$_GameEngine_$586_$",
                           "typeString": "function () returns (contract GameEngine)"
                         },
                         "typeName": {
@@ -6597,10 +6597,10 @@
                           "id": 133,
                           "name": "GameEngine",
                           "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 557,
+                          "referencedDeclaration": 586,
                           "src": "2126:10:1",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_contract$_GameEngine_$557",
+                            "typeIdentifier": "t_contract$_GameEngine_$586",
                             "typeString": "contract GameEngine"
                           }
                         }
@@ -6616,13 +6616,13 @@
                       "src": "2122:16:1",
                       "tryCall": false,
                       "typeDescriptions": {
-                        "typeIdentifier": "t_contract$_GameEngine_$557",
+                        "typeIdentifier": "t_contract$_GameEngine_$586",
                         "typeString": "contract GameEngine"
                       }
                     },
                     "src": "2109:29:1",
                     "typeDescriptions": {
-                      "typeIdentifier": "t_contract$_GameEngine_$557",
+                      "typeIdentifier": "t_contract$_GameEngine_$586",
                       "typeString": "contract GameEngine"
                     }
                   },
@@ -7849,10 +7849,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "4090:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -7917,7 +7917,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 731,
+                              "referencedDeclaration": 760,
                               "src": "4184:3:1",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -8004,10 +8004,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 735,
+                      "referencedDeclaration": 764,
                       "src": "4171:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -8111,7 +8111,7 @@
                           "name": "block",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 721,
+                          "referencedDeclaration": 750,
                           "src": "4316:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
@@ -8354,7 +8354,7 @@
                               "referencedDeclaration": 48,
                               "src": "4436:10:1",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_GameEngine_$557",
+                                "typeIdentifier": "t_contract$_GameEngine_$586",
                                 "typeString": "contract GameEngine"
                               }
                             },
@@ -8365,7 +8365,7 @@
                             "lValueRequested": false,
                             "memberName": "evaluateMove",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 556,
+                            "referencedDeclaration": 585,
                             "src": "4436:23:1",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_payable$_t_string_memory_ptr_$returns$_t_bool_$",
@@ -8425,10 +8425,10 @@
                       "name": "require",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [
-                        734,
-                        735
+                        763,
+                        764
                       ],
-                      "referencedDeclaration": 734,
+                      "referencedDeclaration": 763,
                       "src": "4428:7:1",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
@@ -8486,7 +8486,7 @@
                           "name": "msg",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 731,
+                          "referencedDeclaration": 760,
                           "src": "4508:3:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
@@ -10021,7 +10021,7 @@
                                                   "name": "block",
                                                   "nodeType": "Identifier",
                                                   "overloadedDeclarations": [],
-                                                  "referencedDeclaration": 721,
+                                                  "referencedDeclaration": 750,
                                                   "src": "5844:5:1",
                                                   "typeDescriptions": {
                                                     "typeIdentifier": "t_magic_block",
@@ -10080,7 +10080,7 @@
                                             "name": "blockhash",
                                             "nodeType": "Identifier",
                                             "overloadedDeclarations": [],
-                                            "referencedDeclaration": 722,
+                                            "referencedDeclaration": 751,
                                             "src": "5834:9:1",
                                             "typeDescriptions": {
                                               "typeIdentifier": "t_function_blockhash_view$_t_uint256_$returns$_t_bytes32_$",
@@ -10116,7 +10116,7 @@
                                           "name": "abi",
                                           "nodeType": "Identifier",
                                           "overloadedDeclarations": [],
-                                          "referencedDeclaration": 718,
+                                          "referencedDeclaration": 747,
                                           "src": "5817:3:1",
                                           "typeDescriptions": {
                                             "typeIdentifier": "t_magic_abi",
@@ -10164,7 +10164,7 @@
                                     "name": "keccak256",
                                     "nodeType": "Identifier",
                                     "overloadedDeclarations": [],
-                                    "referencedDeclaration": 725,
+                                    "referencedDeclaration": 754,
                                     "src": "5807:9:1",
                                     "typeDescriptions": {
                                       "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
@@ -10701,7 +10701,8 @@
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-14T12:50:34.228Z",
+  "updatedAt": "2020-12-14T15:26:27.480Z",
+  "networkType": "ethereum",
   "devdoc": {
     "author": "Jaan Smith",
     "details": "A lot of the basic functionality of chess is missing here,  experimentation required to see if this can be done on chain, perhaps oracle nodes instead?",

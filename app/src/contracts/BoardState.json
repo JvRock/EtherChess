@@ -147,7 +147,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 41,
-        "sourceUnit": 717,
+        "sourceUnit": 746,
         "src": "67:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -162,10 +162,10 @@
               "id": 3,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 716,
+              "referencedDeclaration": 745,
               "src": "305:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$716",
+                "typeIdentifier": "t_contract$_Ownable_$745",
                 "typeString": "contract Ownable"
               }
             },
@@ -175,8 +175,8 @@
           }
         ],
         "contractDependencies": [
-          613,
-          716
+          642,
+          745
         ],
         "contractKind": "contract",
         "documentation": "@title The board state to be used by the ChessGame contract to store FEN states\n @author Jaan Smith\n @notice Does not enforce any valid positions",
@@ -184,8 +184,8 @@
         "id": 40,
         "linearizedBaseContracts": [
           40,
-          716,
-          613
+          745,
+          642
         ],
         "name": "BoardState",
         "nodeType": "ContractDefinition",
@@ -509,7 +509,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 667,
+                  "referencedDeclaration": 696,
                   "src": "1132:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -634,7 +634,7 @@
         "id": 2,
         "nodeType": "ImportDirective",
         "scope": 41,
-        "sourceUnit": 717,
+        "sourceUnit": 746,
         "src": "67:52:0",
         "symbolAliases": [],
         "unitAlias": ""
@@ -649,10 +649,10 @@
               "id": 3,
               "name": "Ownable",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 716,
+              "referencedDeclaration": 745,
               "src": "305:7:0",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_Ownable_$716",
+                "typeIdentifier": "t_contract$_Ownable_$745",
                 "typeString": "contract Ownable"
               }
             },
@@ -662,8 +662,8 @@
           }
         ],
         "contractDependencies": [
-          613,
-          716
+          642,
+          745
         ],
         "contractKind": "contract",
         "documentation": "@title The board state to be used by the ChessGame contract to store FEN states\n @author Jaan Smith\n @notice Does not enforce any valid positions",
@@ -671,8 +671,8 @@
         "id": 40,
         "linearizedBaseContracts": [
           40,
-          716,
-          613
+          745,
+          642
         ],
         "name": "BoardState",
         "nodeType": "ContractDefinition",
@@ -996,7 +996,7 @@
                   "name": "onlyOwner",
                   "nodeType": "Identifier",
                   "overloadedDeclarations": [],
-                  "referencedDeclaration": 667,
+                  "referencedDeclaration": 696,
                   "src": "1132:9:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_modifier$__$",
@@ -1097,7 +1097,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-14T12:50:34.225Z",
+  "updatedAt": "2020-12-14T15:24:35.810Z",
   "devdoc": {
     "author": "Jaan Smith",
     "methods": {

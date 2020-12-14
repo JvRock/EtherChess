@@ -19,15 +19,16 @@ const path = require("path");
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
-
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const fs = require('fs');
+var mnemonic;
 //This mnemonic should be created only if you wish to deploy to rinkeby
 try {
-const mnemonic = fs.readFileSync(".secret").toString().trim();
+  mnemonic = fs.readFileSync(".secret").toString().trim();
 } catch (e) {
   console.log(e);
 }
+
 module.exports = {
   /**
    * Networks define how you connect to your ethereum client and let you set the
@@ -40,6 +41,8 @@ module.exports = {
    */
   contracts_build_directory: path.join(__dirname, "app/src/contracts"),
 
+
+  
   networks: {
     // Useful for testing. The `development` name is special - truffle uses it by default
     // if it's defined here and no other network is specified at the command line.
