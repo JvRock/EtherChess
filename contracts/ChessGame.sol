@@ -63,7 +63,7 @@ contract ChessGame {
     /// @author Jaan Smith
     /// @notice Returns the object representing the current team's players
     /// @dev May be some bugs lurking in this to do with block validation
-    /// @return A string representing which colour's turn it is, and The array containing the current team's players whos turn it is
+    /// @return turnString A string representing which colour's turn it is, and The array containing the current team's players whos turn it is
     function getCurrentTeamsPlayers() public view returns(string memory turnString, address[] memory players)
     {
         if(turn == false) return ( "White", whitePlayers );
