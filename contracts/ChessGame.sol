@@ -12,6 +12,8 @@ import './BoardState.sol';
 contract ChessGame {
 
     BoardState boardState;
+    
+    //This function would eventually be turned into a reference to a singleton (probably via proxy) as an upgradeable contract
     GameEngine gameEngine;
 
     //A list of players. Odd numbers are black, even numbers are white.
