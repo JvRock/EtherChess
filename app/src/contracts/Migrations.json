@@ -900,8 +900,8 @@
     "7001": {
       "events": {},
       "links": {},
-      "address": "0x59775A99Eb86508582859A31bfF80d593AC98600",
-      "transactionHash": "0x3ece5343555f444841d0000862bfe36ccf9e04cbc089e560d6de5423ae5e14c1"
+      "address": "0xfc2a27f84733E2942F5B69398FaE504C4EC957Ec",
+      "transactionHash": "0x93d3f20fd94e7b65851c092d7f2a3f4430d84bf9fdd3ce62f753dbeaa10992ca"
     },
     "1607962625344": {
       "events": {},
@@ -911,7 +911,7 @@
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-14T16:25:49.073Z",
+  "updatedAt": "2020-12-15T02:37:36.777Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

@@ -354,7 +354,7 @@
   },
   "networks": {},
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-14T16:25:46.436Z",
+  "updatedAt": "2020-12-15T02:37:34.163Z",
   "devdoc": {
     "author": "Jaan Smith",
     "details": "At this point this simply evaluates to true allowing illegal moves the front-end disallows incorrect moves, but this can easily be bypassed",

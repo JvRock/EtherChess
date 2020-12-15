@@ -18,7 +18,6 @@ class NewGame extends React.Component {
 
   componentDidMount() {
     const { drizzle } = this.props;
-    var state = drizzle.store.getState();
     const contract = drizzle.contracts.GameCreator;
 
     // let drizzle know we want to watch the `getGamesSize` & `latestGame` method
@@ -123,7 +122,7 @@ class NewGame extends React.Component {
     if (!txHash || transactions[txHash] === undefined) return null;
     // otherwise, return the transaction status
     const { GameCreator } = this.props.drizzleState.contracts;
-    if(transactions[txHash].status != "success") {
+    if(transactions[txHash].status !== "success") {
       return "transaction error";
     } else {
       const existingGame = GameCreator.latestGame[this.state.latestGame];

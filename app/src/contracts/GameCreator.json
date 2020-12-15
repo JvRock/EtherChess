@@ -3380,8 +3380,8 @@
         }
       },
       "links": {},
-      "address": "0x568660a8cC52825E2c58CF25183e0035F5B732c8",
-      "transactionHash": "0x23e1ecfb942afb1a528b2ae0878664158c68b65c396c291c1c4fbf829f8a9dd9"
+      "address": "0xE67809166BcC6b2ECD565883AafB07628973e8A4",
+      "transactionHash": "0x564be649d7104b599145984e9767d51b8d648ad7674ee395dcc9c7786b90f489"
     },
     "1607962625344": {
       "events": {
@@ -3411,7 +3411,7 @@
     }
   },
   "schemaVersion": "3.2.5",
-  "updatedAt": "2020-12-14T16:25:49.065Z",
+  "updatedAt": "2020-12-15T02:37:36.769Z",
   "networkType": "ethereum",
   "devdoc": {
     "author": "Jaan Smith",

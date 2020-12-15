@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import Chessground from 'react-chessground';
 import 'react-chessground/dist/styles/chessground.css';
 import Chess from "chess.js"
-import { Button } from 'reactstrap';
 import json from "../contracts/ChessGame.json"
-import Web3 from 'web3';
 import {withRouter} from 'react-router-dom';
 
 const chess = new Chess();
@@ -23,11 +20,11 @@ class ChessBoard extends React.Component {
       )
     });
     const contract = drizzle.contracts.ChessGame;
+
     // let drizzle know we want to watch the `getBoardState` method
     const boardDataKey = contract.methods["getBoardState"].cacheCall();
     const turnDataKey = contract.methods["turn"].cacheCall();
     const playersKey = contract.methods["getCurrentTeamsPlayers"].cacheCall();
-    //const blackPlayersDataKey = contract.methods["blackPlayers"].cacheCall();
 
     // save the `dataKey` to local component state for later reference
     this.setState({ boardDataKey });
@@ -54,9 +51,9 @@ class ChessBoard extends React.Component {
         var viewOnlyFlag = false;
         var turn = players.value[0]
         var turnFragment;
-        if(players.value[1].indexOf(this.props.drizzleState.accounts[0]) == -1 ) {
+        if(players.value[1].indexOf(this.props.drizzleState.accounts[0]) === -1 ) {
           viewOnlyFlag = true;
-         turnFragment = (<h3>Not currently your turn.</h3>)
+          turnFragment = (<h3>Not currently your turn.</h3>)
         } else {
           turnFragment = (<h3>{turn}'s turn. Make a move!</h3>);
         }
